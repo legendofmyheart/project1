@@ -75,4 +75,10 @@ To Find the name server for amrita.edu we can use nslookup command with the foll
 ## What is ARP and RARP? Answer the following questions below: 
 ARP (Address Resolution Protocol) is used to map the IP Address with the corresponding MAC address. In the Other hand RARP (Reverse Address Resolution Protocol) is used to map MAC Address with the Corresponding IP Address.
 
+### Use arp command to find the gateway address and host systems hardware address.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/617fa359-9f82-4d31-83d9-e14112f90822)
+From the Above Screenshot Gateway Address is 192.168.1.1
+
+### How do you find the arp entries for a particular interface?
+
 
