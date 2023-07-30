@@ -81,4 +81,12 @@ From the Above Screenshot Gateway Address is 192.168.1.1
 
 ### How do you find the arp entries for a particular interface?
 
+### How do delete an arp entry? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/ca535e64-969d-46b2-a89f-19fd553bb7db)
+To Delete an arp entry we can use -d flag. arp -d <IP_ADDR>
+
+### How do you add and arp entry in arpcache? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/d69e0aab-347f-4c11-bcd4-2df57bc9b9e0)
+To add an entry in arpcache we can use -s flag along with ip address and the associated MAC address.
+arp -s 224.0.0.252 01-00-5e-00-00-fc
 
