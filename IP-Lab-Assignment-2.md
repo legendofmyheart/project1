@@ -8,9 +8,10 @@ PING Command is used to the reachability of the host, for example, I want to ope
 
 By Performing PING Command for the given URL www.google.com, The Following Values is Obtained:
 
-IP Address(www.google.com): - 142.250.67.36
+> IP Address(www.google.com): - 142.250.67.36
 
-Time to live Value (TTL): - 57
+>Time to live Value (TTL): - 57
+
 TTL in PING Command describes the number of hops the data packets take to reach the destination host in this case www.google.com. The Default Value of TTL is 255, It gets decremented while traversing through each router, If TTL decrements to 0, The data packets will be dropped.
 
 Round Trip Time Value (in Milliseconds): - Minimum = 8ms, Maximum = 9ms, Average = 8ms.
@@ -83,10 +84,72 @@ From the Above Screenshot Gateway Address is 192.168.1.1
 
 ### How do delete an arp entry? 
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/ca535e64-969d-46b2-a89f-19fd553bb7db)
-To Delete an arp entry we can use -d flag. arp -d <IP_ADDR>
+To Delete an arp entry we can use -d flag. 
+> arp -d <IP_ADDR>
 
 ### How do you add and arp entry in arpcache? 
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/d69e0aab-347f-4c11-bcd4-2df57bc9b9e0)
 To add an entry in arpcache we can use -s flag along with ip address and the associated MAC address.
-arp -s 224.0.0.252 01-00-5e-00-00-fc
+> arp -s 224.0.0.252 01-00-5e-00-00-fc
+
+
+## 7. Use Wireshark (Latest version) to solve the below scenarios
+### Use Evidence.pcapng as evidence file to answer the below questions.
+### 1. You, as a SOC analyst noted that someone tried to send information (PING) to unknown IP address, and you are suspecting some malicious information might transferred in it. Analyze the traffic file.
+
+### Find the data transferred.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/3e8bc3e8-704a-4b74-8fd2-f04644fd7108)
+> To Find the Data transferred, From the Above Statement it is mentioned that Someone tried to send information (PING) to unknown IP Address. PING command sends ICMP Packet, In Filter Column type ICMP to list only the ICMP Packets.
+
+### Find the source and destination IP of that log.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/a71fe56f-b963-4f62-a3ec-148042d282bc)
+> To Find the source and destination IP Address of the log navigate to bottom left panel, Click the Internet Protocol Version 4.
+
+### Find the Data length (Bytes) and verify the checksum status on destination.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/e0ab5bfa-fd52-4489-8367-3215de07f0cc)
+
+> In Wireshark, By Default the checksum is disabled, to enable it navigate preferences>advanced Search IP checksum enable it. Now we can be able to check the checksum of the message.
+
+## 2. Now you have found that some kind of file has been downloaded by insider in
+unencrypted web traffic. Your task is to
+
+>We can verify the unencrypted web traffic we can search for any HTTP packets.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/b0b8a87b-bdb7-47e9-9446-3613450b703f)
+
+### Find the name and type of file.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/23c7ae92-cba8-4d3f-a450-6385d1318f32)
+> File Name: - 1.jpg
+> Type of File: - jpeg
+
+### Export that file from that web traffic, then analyze the file for any secret information.
+> 1. To Export the file click on File in Left top corner->Click Export Objects->HTTP.
+> 2. A New Box will open HTTP Object List, There we can preview the image and also we can download it.
+![1](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/d64c46c1-79a8-4f79-a5ee-52a2edde4347)
+
+### Find the hostname in which the file is stored
+From the HTTP Object List we can able to see the hostname in which the file is stored.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/268edb3e-f08e-4313-89cc-7a88ff194640)
+> Hostname: 192.168.31.67
+
+## 3. Based upon their activities, auditing team has started investigation against them and found that the insider passed some sensitive information via call to someone. The traffic has been captured.
+### a. Analyze the traffic and find those conversations and extract the sensitive information in it.
+> To Analyze traffic in call we can use VOIP CALLS Options in Telephony Column and we can search for SIP Protocol in Filter Column as this protocol is used in voice communication.
+> 1. Search sip in filter column 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/2f82906e-37ac-4195-b12e-2216f45bdacc)
+
+> 2. Click Telephony>VOIP CALLS
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/db4a547f-ee5d-4b5a-955c-d25038c29321)
+
+> 3. To play the VoIP Call Uncheck the Limit Display Filter, Click Play Stream.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/0ee9d6d0-6a96-456e-ba68-5545a6616f24)
+
+> 4. We can also download the audio using export option.
+
+> 5. The information in the Voice call states that "hi customer support this is actually here I would the password to clear this level ok I don't need this password anyone else as in engine Mass Effect beers in Battlefield who is it out thank you alright thank you."
+
+### Find the call-ID when the status of the call is ringing.
+> Call-ID: 01caab9b53b12efe00d3493a67ff695d@192.168.31.8:5060
+
+## 4. On further investigation, you have a suspect on some wireless device communications. List out the Bluetooth devices communications from this traffic and find the details about native Bluetooth adapter.
+
 
