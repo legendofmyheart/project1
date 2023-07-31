@@ -83,6 +83,10 @@ ARP (Address Resolution Protocol) is used to map the IP Address with the corresp
 > From the Above Screenshot Gateway Address is 192.168.1.1
 
 ### How do you find the arp entries for a particular interface?
+> To find the arp entries for a particular interface we can use -a flag along with the IP address
+> arp -a 224.0.0.18
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/73cf0e47-99cb-44aa-b753-817a2a2a7e5c)
+
 
 ### How do delete an arp entry? 
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/ca535e64-969d-46b2-a89f-19fd553bb7db)
