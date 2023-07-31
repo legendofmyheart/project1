@@ -71,6 +71,7 @@ To find out the mail exchanger for the domain google.com we can use the followin
 
 ### What is the name server for amrita.edu
 To Find the name server for amrita.edu we can use nslookup command with the following flag nslookup -type=NS amrita.edu NS abbreviates for Name Server.
+
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/291f1302-88e4-4061-8da6-b4448ad98ac2)
 
 ## What is ARP and RARP? Answer the following questions below: 
