@@ -43,7 +43,8 @@ From the Above Diagram, Data packet makes 10 hops to reach the destination host(
 
 ### Wait for a while and execute the same command again. Is the output the same as the 
 first time? Observe and compare the difference and explain the reason. 
-
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/6086a0dd-7011-48b2-bd4b-69b331116184)
+The Number of hops that is taken initially is different from current hops, This is because there may be an network latency or hardware issues in the path, so number the hops differ on time to time due to any interferences in the path.
 
 
 ## 3. You have to read about NETSTAT from the manual page or help, before answering the below questions:
@@ -91,6 +92,26 @@ To Delete an arp entry we can use -d flag.
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/d69e0aab-347f-4c11-bcd4-2df57bc9b9e0)
 To add an entry in arpcache we can use -s flag along with ip address and the associated MAC address.
 > arp -s 224.0.0.252 01-00-5e-00-00-fc
+
+## 6. Read about TCPDUMP tool [use manual page]. Answer the questions below: (1 marks)
+
+### a. Using tcpdump, get the information about the general incoming network traffic with domain names.
+
+> To get information about the general incoming traffic with domain names we can use the following command:
+> sudo tcpdump -v -i eth0 host bbc.com
+> -v means verbose output
+> -i eth0 specifies the interface in which the incoming traffic need to be captured.
+> host bbc.com specifies the domain name.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/9dc10573-167c-418a-b28e-a7b49de91c77)
+
+### b. Using tcpdump, get the information about the general incoming network traffic with ip address on specific interface.
+
+> To get information about the general incoming traffic with ip address on specific interface we can use the following command:
+> sudo tcpdump -v -i eth0 "net 10.0.2.1"
+> -v means verbose output
+> -i eth0 Specifies the interface
+>"net 10.0.2.15" specifies the ip address in which the incoming traffic need to be captured.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/cac31eb4-b937-40bf-847d-835ccdf6bce8)
 
 
 ## 7. Use Wireshark (Latest version) to solve the below scenarios
@@ -155,3 +176,10 @@ From the HTTP Object List we can able to see the hostname in which the file is s
 >To List out the Bluetooth Device Communication Navigate Wireless> Bluetooth Devices.
 >To Find details about native Bluetooth adapter click on Dropdown and select option other than All interfaces.
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/570a46f6-0de4-4bd7-afdc-83ca12aa7b33)
+
+### a. Analyze the captured WPA handshake from this traffic and report in detail about it to your administrator.
+
+### b. Geo locate all the endpoint of wireless devices.
+To Locate all the endpoint of wireless devices: -
+> Download latest Maxmind database Directories.
+> Navigate Edit>Preferences>Name Resolution>Add Downloaded GeoIP File Directory in Maxmind database directories.
