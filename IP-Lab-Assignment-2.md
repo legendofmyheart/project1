@@ -41,8 +41,7 @@ TRACERT Command displays the path that data packets hops from different networks
 ### How many hops is your machine away from google.com?
 From the Above Diagram, Data packet makes 10 hops to reach the destination host(www.google.com)
 
-### Wait for a while and execute the same command again. Is the output the same as the 
-first time? Observe and compare the difference and explain the reason. 
+### Wait for a while and execute the same command again. Is the output the same as the first time? Observe and compare the difference and explain the reason. 
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/6086a0dd-7011-48b2-bd4b-69b331116184)
 The Number of hops that is taken initially is different from current hops, This is because there may be an network latency or hardware issues in the path, so number the hops differ on time to time due to any interferences in the path.
 
