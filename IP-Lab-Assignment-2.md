@@ -152,4 +152,6 @@ From the HTTP Object List we can able to see the hostname in which the file is s
 
 ## 4. On further investigation, you have a suspect on some wireless device communications. List out the Bluetooth devices communications from this traffic and find the details about native Bluetooth adapter.
 
-
+>To List out the Bluetooth Device Communication Navigate Wireless> Bluetooth Devices.
+>To Find details about native Bluetooth adapter click on Dropdown and select option other than All interfaces.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/570a46f6-0de4-4bd7-afdc-83ca12aa7b33)
