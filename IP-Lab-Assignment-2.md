@@ -183,8 +183,18 @@ From the HTTP Object List we can able to see the hostname in which the file is s
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/570a46f6-0de4-4bd7-afdc-83ca12aa7b33)
 
 ### a. Analyze the captured WPA handshake from this traffic and report in detail about it to your administrator.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/1b2df79b-446d-4966-96d1-9a9a2e94e663)
 
 ### b. Geo locate all the endpoint of wireless devices.
 To Locate all the endpoint of wireless devices: -
 > Download latest Maxmind database Directories.
 > Navigate Edit>Preferences>Name Resolution>Add Downloaded GeoIP File Directory in Maxmind database directories.
+> Navigate>Statistics>Endpoints>Uncheck Limit to Display Filter>IPv4 Column>Map.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/83303f52-6c29-46f4-a0dd-6186a857fa30)
+
+### c. Analyze the protocol level information transfer between wireless devices.
+Open the Statistics > Protocol Hierarchy 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/689a0edd-0235-4d4a-9e84-e273a7159320)
+
+
+
