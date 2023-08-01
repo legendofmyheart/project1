@@ -193,8 +193,10 @@ To Locate all the endpoint of wireless devices: -
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/83303f52-6c29-46f4-a0dd-6186a857fa30)
 
 ### c. Analyze the protocol level information transfer between wireless devices.
-Open the Statistics > Protocol Hierarchy 
-![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/689a0edd-0235-4d4a-9e84-e273a7159320)
+To Analyze the protocol level information transfer between wireless devices
+> Open the Statistics > Flow Graph
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/bf1cf5b7-9168-4763-86d4-b62f9660d32d)
+
 
 
 
