@@ -46,3 +46,36 @@ Your browser should display a very simple, one-line HTML file.
 
 ### 7. By inspecting the raw data in the packet content window, do you see any headers within the data that are not displayed in the packet-listing window? If so, name one. 
 
+### 8. Inspect the contents of the first HTTP GET request from your browser to the server. Do you see an 
+“IF-MODIFIED-SINCE” line in the HTTP GET? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/55d6115a-cb46-4c68-9960-c91dd8035447)
+>From the Above Screenshot, IF-MODIFIED-SINCE line is not present in the first HTTP GET request from browser to the server.
+
+### 9. Inspect the contents of the server response. Did the server explicitly return the contents of the file? How can you tell?  
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/8900b47e-aad2-4a9a-a06a-c14e2564228a)
+>From the Above Screenshot, Server is explicitly returning the contents of the file that can be viewed in Line-based text data: text/html (10 lines)
+
+### 10. Now inspect the contents of the second HTTP GET request from your browser to the server. Do you see an “IF-MODIFIED-SINCE:” line in the HTTP GET? What information follows the “IF-MODIFIED SINCE:” header? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/8dc6c129-b076-4a83-bd9c-d22ce90a286c)
+>From the Above Screenshot, IF-MODIFIED-SINCE line is present, If-Modified-Since: Fri, 04 Aug 2023 05:59:02 GMT\r\n
+
+### 11. What is the HTTP status code and phrase returned from the server in response to this second HTTP GET? Did the server explicitly return the file’s contents? Explain.
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/6984c089-8759-495d-8f36-940c1cf4f684)
+>From the Above Screenshot, the HTTP status and phrase returned from the server in response is HTTP/1.1 304 Not Modified\r\n
+
+### 12. How many HTTP GET request messages did your browser send? Which packet number in the trace contains the GET message for the Bill or Rights?  
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/c1706569-a300-40e7-ab80-18b39847d91e)
+>From the Above Screenshot, 2 HTTP GET request messages is sent to the server, Packet number 204 Contains the GET message for the Bill or Rights.
+
+### 13. Which packet number in the trace contains the status code and phrase associated with the response to the HTTP GET request?  
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/eeaa3afe-d207-4625-8023-60ab02eefc50)
+>From the Above Screenshot, Packet number 224 contains the status code 200 and phrase associated with the response to the HTTP GET request is HTTP/1.1 200 OK (text/html)
+
+### 14. What is the status code and phrase in the response? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/78ef34d9-9600-4a41-9129-8535cedbb5d7)
+>From the Above Screenshot, The Status code and phrase in the response is 200 OK
+
+### 15. How many data-containing TCP segments were needed to carry the single HTTP response and the text of the Bill of Rights? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/9dea5dd1-33f4-433d-a56f-8f3bc41c19aa)
+>From the Above Screenshot, 4 data TCP Segment is needed to carry the single HTTP Response 1460,1460,1460,480 for a total of 4860 Bytes.
+
