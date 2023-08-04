@@ -1,4 +1,4 @@
-# IP LAB ASSIGNMENT 3
+# Analyzing Web Application Protocol-HTTP
 1. Let’s begin our exploration of HTTP by downloading a very simple HTML file - one that is very 
 short and contains no embedded objects. Do the following:  
 1. Start up your web browser.  
@@ -45,6 +45,8 @@ Your browser should display a very simple, one-line HTML file.
 >The Content length is 128. (File Data:128 bytes).
 
 ### 7. By inspecting the raw data in the packet content window, do you see any headers within the data that are not displayed in the packet-listing window? If so, name one. 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/bff6a703-c243-4939-9261-9604abed1f3d)
+>Since the Line Based Text Data showing the exact content as on the website, there is no encryption on the website.
 
 ### 8. Inspect the contents of the first HTTP GET request from your browser to the server. Do you see an 
 “IF-MODIFIED-SINCE” line in the HTTP GET? 
@@ -79,3 +81,10 @@ Your browser should display a very simple, one-line HTML file.
 ![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/9dea5dd1-33f4-433d-a56f-8f3bc41c19aa)
 >From the Above Screenshot, 4 data TCP Segment is needed to carry the single HTTP Response 1460,1460,1460,480 for a total of 4860 Bytes.
 
+### 16. What is the server’s response (status code and phrase) in response to the initial HTTP GET message from your browser? 
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/a10d3f12-b0ec-40e9-84e6-deeaab436b22)
+>From the Above Screenshot, Server's response to the initial HTTP GET message is 401 Unauthorized.
+
+### 17. When your browser sends the HTTP GET message for the second time, what new field is included in the HTTP GET message?
+![image](https://github.com/giridharan-6701/IP_Lab_Assignment_2/assets/94190302/7ee82f26-6c27-4028-a88d-fc918f42b01d)
+>From the Above Screenshot, Authorization Field is added along with the credentials that we entered, In the First HTTP GET message Authorization Field is Missing in the HTTP Column.
